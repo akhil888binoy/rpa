@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="662,1587" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="662,1782" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="64">
+    <scg:List x:TypeArguments="x:String" Capacity="33">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -37,7 +37,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="88">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="47">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -86,19 +86,19 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="642,1522" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="642,1717" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: index.html - DemoHtml - Visual Studio Code" sap:VirtualizedContainerService.HintSize="580,1411" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="59f88495-2ca6-438d-8265-7a061d5c3bbc" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: index.html - DemoHtml - Visual Studio Code" sap:VirtualizedContainerService.HintSize="580,1606" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="59f88495-2ca6-438d-8265-7a061d5c3bbc" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="546,1120" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="546,1315" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="HtmlDemo" />
             </Sequence.Variables>
@@ -107,6 +107,17 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get Text ' index.css  index.html'" sap:VirtualizedContainerService.HintSize="484,157" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="59f88495-2ca6-438d-8265-7a061d5c3bbc" TextString="[HtmlDemo]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="226, 95, 1148, 611" DesignTimeScaleFactor="1" FriendlyName="'grouping'" FullSelectorArgument="&lt;ctrl name='index.html - DemoHtml - Visual Studio Code' role='document' /&gt;&lt;ctrl name='index.html' role='grouping' /&gt;&lt;ctrl role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='index.html - DemoHtml - Visual Studio Code' role='document' /&gt;&lt;ctrl name='index.html' role='grouping' /&gt;&lt;ctrl role='grouping' automationid='' /&gt;" Guid="e9b00f7f-4d6d-4153-9271-0021d2376132" InformativeScreenshot="2757c8aa757de4f519ea5e279f344f12.png" ScopeSelectorArgument="&lt;wnd app='code.exe' cls='Chrome_WidgetWin_1' title='index.html - DemoHtml - Visual Studio Code' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="56, 95, 170, 567" FriendlyName="' index.css  index.html'" FullSelectorArgument="&lt;ctrl name='index.html - DemoHtml - Visual Studio Code' role='document' /&gt;&lt;ctrl name='Files Explorer' role='outline' /&gt;" FuzzySelectorArgument="&lt;ctrl name='index.html - DemoHtml - Visual Studio Code' role='document' /&gt;&lt;ctrl name='Files Explorer' role='outline' automationid='' check:fulltext=' index.css&amp;#xD;&amp;#xA; index.html' /&gt;" ImageBase64="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cEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkao33guz8TLi0mLkmrcE1cYkxcksZp+8C9Ji4xtgokmbgkjeGauOSM0/aBex8WLi0mLkkmLknLX85MXGrGaWvikrOauMIlxsQlaZy2wiXHxCXJxCVpNXF/LlxabBVIGqftgyYuNSYuSSYuSWO4fjkjZ5y2D94nXGJMXJKWE/feU8KlxcQlaZy2D953avgvDtNkLXpGjggAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
             <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: HTML Landing Page Example" sap:VirtualizedContainerService.HintSize="484,550" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="a727c90b-bc54-4fd7-970d-0a9141b55832" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
