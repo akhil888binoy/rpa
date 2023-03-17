@@ -131,6 +131,9 @@
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
                   <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,537" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="CssResult" />
+                    </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -147,7 +150,7 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="388,164" sap2010:WorkflowViewState.IdRef="NGetText_3" Version="V3" />
+                    <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="388,164" sap2010:WorkflowViewState.IdRef="NGetText_3" TextString="[CssResult]" Version="V3" />
                   </Sequence>
                 </ActivityAction>
               </uix:NApplicationCard.Body>
