@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="662,1782" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="662,2267" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
       <x:String>System.Activities</x:String>
@@ -86,21 +86,22 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="642,1717" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="642,2202" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: index.html - DemoHtml - Visual Studio Code" sap:VirtualizedContainerService.HintSize="580,1606" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="59f88495-2ca6-438d-8265-7a061d5c3bbc" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: index.html - DemoHtml - Visual Studio Code" sap:VirtualizedContainerService.HintSize="580,2091" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="59f88495-2ca6-438d-8265-7a061d5c3bbc" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="546,1315" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="546,1800" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="HtmlDemo" />
+              <Variable x:TypeArguments="x:String" Name="Style" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -118,19 +119,24 @@
                 </uix:TargetAnchorable>
               </uix:NGetText.Target>
             </uix:NGetText>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: HTML Landing Page Example" sap:VirtualizedContainerService.HintSize="484,550" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="a727c90b-bc54-4fd7-970d-0a9141b55832" Version="V2">
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="484,239" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="CSS or SASS " Title="Style">
+              <ui:InputDialog.Result>
+                <OutArgument x:TypeArguments="x:String">[Style]</OutArgument>
+              </ui:InputDialog.Result>
+            </ui:InputDialog>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: HTML Landing Page Example" sap:VirtualizedContainerService.HintSize="484,754" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="a727c90b-bc54-4fd7-970d-0a9141b55832" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,537" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'DIV'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="a727c90b-bc54-4fd7-970d-0a9141b55832" Text="[HtmlDemo]" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'DIV'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="a727c90b-bc54-4fd7-970d-0a9141b55832" Text="[HtmlDemo + &quot; add colorful &quot; + Style +&quot; for this html code[k(Enter)]&quot;]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://chat.openai.com/chat" DesignTimeRectangle="291, 592, 768, 50" DesignTimeScaleFactor="1" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div' idx='2' parentid='__next' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='flex flex-col w-full py-2 flex-grow md:py-3 md:pl-4 relative border border-black/10 bg-white dark:border-gray-900/50 dark:text-white dark:bg-gray-700 rounded-md shadow-[0_0_10px_rgba(0,0,0,0.10)] dark:shadow-[0_0_15px_rgba(0,0,0,0.10)]' parentid='__next' tag='DIV' aaname='' /&gt;" Guid="2a7e437e-9cdf-43dd-b9d3-48b4d77ece0b" ImageBase64="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" InformativeScreenshot="d2b8d12ba8b46e70a091ea68f3efaa10.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='HTML Landing Page Example' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -141,6 +147,7 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
+                    <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="388,164" sap2010:WorkflowViewState.IdRef="NGetText_3" Version="V3" />
                   </Sequence>
                 </ActivityAction>
               </uix:NApplicationCard.Body>
