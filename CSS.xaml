@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="662,2267" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="662,2260" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
       <x:String>System.Activities</x:String>
@@ -86,19 +86,19 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="642,2202" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="642,2195" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: index.html - DemoHtml - Visual Studio Code" sap:VirtualizedContainerService.HintSize="580,2091" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="59f88495-2ca6-438d-8265-7a061d5c3bbc" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: index.html - DemoHtml - Visual Studio Code" sap:VirtualizedContainerService.HintSize="580,2084" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="59f88495-2ca6-438d-8265-7a061d5c3bbc" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="546,1800" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="546,1793" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="HtmlDemo" />
               <Variable x:TypeArguments="x:String" Name="Style" />
@@ -124,13 +124,13 @@
                 <OutArgument x:TypeArguments="x:String">[Style]</OutArgument>
               </ui:InputDialog.Result>
             </ui:InputDialog>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: HTML Landing Page Example" sap:VirtualizedContainerService.HintSize="484,754" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="a727c90b-bc54-4fd7-970d-0a9141b55832" Version="V2">
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: HTML Landing Page Example" sap:VirtualizedContainerService.HintSize="484,747" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="a727c90b-bc54-4fd7-970d-0a9141b55832" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,537" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,530" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="CssResult" />
                     </Sequence.Variables>
@@ -150,7 +150,17 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="388,164" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" Version="V3" />
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Copy code'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a727c90b-bc54-4fd7-970d-0a9141b55832" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://chat.openai.com/chat" DesignTimeRectangle="1043, 340, 81, 16" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Copy code'" FullSelectorArgument="&lt;webctrl aaname='Copy code' idx='4' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Copy code' type='' tag='BUTTON' class='flex ml-auto gap-2' check:innerText='Copy code' /&gt;" Guid="1566ab2e-149f-423b-a584-28496c8473ef" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFUAAAAUCAYAAAD88XGTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAInSURBVFhH7ZYxTwIxFID9UfoD2PQHOOpMZCAkxklHjWEgwCqTEgiDJo53syQMBOZzhB9S+1659r22VwjCeSYdvsTre63vvtf2ODk9q4nIYYlSj0BQ6tX1jWg07hgw5suNGAqlgrwsW3uJYsM4Uuv1W5GmX1LeCgXacSV2JabTJeba8YhHKsh6GYzE41MPBb6+fTBgDGKj0SfKt+dHPFLp8e71BlLkOwPGIJZfD3TurnRScp3ME9H05FSPoUiymeh4Y5yg1BD7SYXC1mIxbpuxViImXZpTVSoqtTnOuNB/RSWltsVknolJyxfbIHftQq4J6wKJ3sGbF+rOdEw1B9akeapxWTrUzxq2tpETuopwrU1sMU64VFKLPa9EqVs6jS9NpUN+/gx/y+K1LBKDl9PjRY2jaxlQKGkAawhKM/UqwZtn9j/dE1idnSoLta8GU6zbEG8MGuP78FkSFFCP3WSzFqxPT4Adwx1KIeuXeqfCzrDFafaWagS4ItxcQ1gq1BqSWvgeklKl5vcaK1bKxOcdjr+ZR2MSmJvKXxGOJBLf5/iTXY+xvLEQs5pMKVcqogTBXIQeSyzWxLhEKZ98VPguUh+s0O7ha+dC1Dw9bl0d9CNmf6iUZBOn9ThSl8tvcf/wzMZ8QA7k+mKHR0kt2hlb7+uScaT2+wPWgRCQa88/DlukWkf1r3GkAucXl3i8Q0COb+5xKJKaH9/QLi4fr9TI74hSD05N/ACVAbL15RTQogAAAABJRU5ErkJggg==" InformativeScreenshot="f74556933a7e98d13b17fe233fa33c5d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Landing Page Solutions.' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="1146, 282, 28, 28" ElementType="Button" FriendlyName="'BUTTON'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button' idx='11' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='p-1 rounded-md hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400' tag='BUTTON' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEWSURBVEhL7ZNNC0FREIb9ONnIQpQkZEFK2IkSK0pRopSFriIL2dhZ+WvDe2rkY+6Ze+uw0F08dT7mnufOmTmxeCJLvyQSOicSfpBMFahYblE6UxH3NUILu70JnU5XQ6PZF2NshBZ62zMNh3OazjbkeWcxxkYoITJCZrjOaq1jxlKcjVDC9fpIo/HKjEvl9neFLMjl6y/zxXL3YHC/aq2ZVCEORleaQxf7xzoORh2xxqC+Wl2twsPhYrJgUDcpjglyzb5C/hjvDnOMsfYe9ww3lbTHqEKeBxHijT5fu4RTIWSoq7THOBXi2SBLaY9xKkSM1ljOmobj+Z364SsE789CQ2sYYBUC/HkQtMwYVeiaSOicfxdm6QaI6wiR+9Y46wAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
                   </Sequence>
                 </ActivityAction>
               </uix:NApplicationCard.Body>
